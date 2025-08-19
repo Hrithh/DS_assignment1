@@ -30,7 +30,7 @@ java TestClient1 -> terminal 4
 java TestClient2 -> terminal 5
 java TestClient3 -> terminal 6
 
-Expected Results
+## Expected Results
 Single Client Test (TestSingleClient)
 max(10,20) → 20
 gcd(18,24,36) → 6
@@ -41,13 +41,13 @@ Clients will interfere with each other (expected behavior)
 Results may be unexpected due to shared stack
 Demonstrates concurrent access patterns
 
-Important Notes
+## Important Notes
 - Compilation First: Must compile before starting registry
 - Port 1099: Ensure no other process is using this port
 - Terminal Management: Use separate terminal tabs/windows
 - Execution Order: Compile → Registry → Server → Clients
 
-Troubleshooting
+## Troubleshooting
 Error: ClassNotFound
 Solution: Ensure you compiled with javac *.java
 
