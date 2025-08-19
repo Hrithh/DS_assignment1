@@ -8,10 +8,12 @@ public class CalculatorClient {
             Calculator calculator = (Calculator) registry.lookup("CalculatorService");
 
             // Test basic operations
-            calculator.pushValue(10);
-            calculator.pushValue(20);
-            calculator.pushOperation("max");
-            System.out.println("Result: " + calculator.pop()); // Should print 20
+            calculator.pushValue(8);
+            calculator.pushValue(12);
+            calculator.pushOperation("gcd");  // Pushes 4 (gcd of 8,12)
+            calculator.pushValue(5);          // Add another value
+            calculator.pushOperation("lcm");  // lcm(4,5) = 20
+            System.out.println("Result: " + calculator.pop()); // Now prints 20
         } catch (Exception e) {
             System.err.println("Client error: " + e.getMessage());
             e.printStackTrace();
